@@ -1,0 +1,18 @@
+@import '../../css/variables';
+
+.header-wrapper {
+    width: 75%;
+    border-bottom: 2px solid rgba(map-get($bg-colors, "green"), 0.25);
+
+    ul {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: map-get($map: $bg-colors, $key: "green");
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    }
+}

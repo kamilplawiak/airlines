@@ -1,0 +1,42 @@
+@import './css/variables';
+
+.main-container {
+    position: absolute;
+    pointer-events: none;
+    z-index: -999;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/images/main_bg.jpg');
+    background-size: cover;
+
+    .bg-text {
+        cursor: default;
+        user-select: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: blur(4px);
+
+        .main-title {
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 2vw;
+            font-weight: 900;
+            font-size: 17vw;
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(
+                to left,
+                rgba(map-get($bg-colors, "purple"), 0.25),
+                rgba(map-get($bg-colors, "grey"), 0.25)
+            );
+        }
+    }
+}
+
+.content-wrapper {
+    position: relative;
+}

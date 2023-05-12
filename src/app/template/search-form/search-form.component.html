@@ -1,0 +1,51 @@
+<div class="search-form-wrapper mt-5">
+    <div class="background rounded-4"></div>
+
+    <div class="content">
+        <form [formGroup]="form">
+            <div
+                class="form-wrapper"
+                [ngClass]="{ 'showIcao': this.showIcao, 'showIata': this.showIata }">
+                <div class="input-wrapper">
+                    <label for="name">Name:</label>
+                    <input
+                        formControlName="name"
+                        type="text"
+                        class="form-control">
+
+                    <input
+                        formControlName="showIcao"
+                        type="checkbox"
+                        name="showIcao"
+                        id="showIcao">
+                    <label for="showIcao">&nbsp;Search by ICAO</label>
+                    <br />
+                    <input
+                        formControlName="showIata"
+                        type="checkbox"
+                        name="showIata"
+                        id="showIata">
+                    <label for="showIata">&nbsp;Search by IATA</label>
+                </div>
+    
+    
+                <div
+                    class="input-wrapper">
+                    <label for="icao">ICAO:</label>
+                    <input
+                        formControlName="icao"
+                        type="text"
+                        class="form-control">
+                </div>
+    
+                <div class="input-wrapper">
+                    <label for="iata">IATA:</label>
+                    <input
+                        formControlName="iata"
+                        type="text"
+                        class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

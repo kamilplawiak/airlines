@@ -1,0 +1,15 @@
+@import '../../css/variables';
+
+.main-page-wrapper {
+    .text-wrapper {
+        .main-page-subtitle {
+            color: map-get($map: $bg-colors, $key: "yellow");
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .btn.btn-warning {
+            font-weight: 700;
+        }
+    }
+}

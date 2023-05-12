@@ -1,0 +1,45 @@
+@import '/src/app/css/variables';
+
+.search-form-wrapper {
+    color: #fff;
+    position: relative;
+    left: calc(75% / 2);
+    width: 25%;
+    height: 100%;
+
+    .background {
+        position: absolute;
+        box-shadow: 0 0 5px #fff;
+        left: -15%;
+        top: -15%;
+        width: 130%;
+        height: 130%;
+        background-color: transparent;
+        backdrop-filter: blur(3px);
+        z-index: -1;
+    }
+
+    .content {
+        .form-wrapper {
+            display: grid;
+            grid-template-rows: 2fr 0fr 0fr;
+            transition: grid-template-rows 0.4s ease-in-out;
+            
+            .input-wrapper {
+                overflow: hidden;
+            }
+
+            &.showIcao:not(&.showIata) {
+                grid-template-rows: 2fr 1fr 0fr;
+            }
+
+            &.showIata:not(&.showIcao) {
+                grid-template-rows: 2fr 0fr 1fr;
+            }
+
+            &.showIcao.showIata {
+                grid-template-rows: 2fr 1fr 1fr;
+            }
+        }
+    }
+}
